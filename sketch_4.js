@@ -15,9 +15,9 @@ function draw() {
   for (let i = 0; i < cloud_box.length; i++) {
     let cloud = cloud_box[i];
     fill(200, 200, 200, cloud.alpha * 0.25); // 影の色
-    ellipse(cloud.x, cloud.y + 5, cloud.size); // 影を描画
+    circle(cloud.x, cloud.y + 5, cloud.size); // 影を描画
     fill(255, 255, 255, cloud.alpha); // 白色で透明度を設定
-    ellipse(cloud.x, cloud.y, cloud.size); // 円を描画
+    circle(cloud.x, cloud.y, cloud.size); // 円を描画
     cloud.x -= 0.5; // 左方向に移動
     cloud.alpha -= 0.5; // 徐々に透明に
     cloud.size += 0.1; // 徐々に大きく
