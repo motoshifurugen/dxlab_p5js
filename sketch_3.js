@@ -1,4 +1,4 @@
-let circles = [];
+let cloud_box = [];
 
 function setup() {
   // 最初に一度だけ実行される処理
@@ -10,10 +10,11 @@ function draw() {
   // 何度も繰り返し実行される処理
   background(137, 189, 222); // 空色
   if (mouseIsPressed) {
-    circles.push({ x: mouseX, y: mouseY }); // マウスの位置に円を追加
+    cloud_box.push({ x: mouseX, y: mouseY }); // マウスの位置に雲を追加
   }
-  for (let i = 0; i < circles.length; i++) {
-    circle(circles[i].x, circles[i].y, 50); // 円たちを描画
-    circles[i].x -= 0.5; // 左方向に移動
+  for (let i = 0; i < cloud_box.length; i++) {
+    let cloud = cloud_box[i];
+    circle(cloud.x, cloud.y, 50); // 雲を描画
+    cloud.x -= 0.5; // 左方向に移動
   }
 }
